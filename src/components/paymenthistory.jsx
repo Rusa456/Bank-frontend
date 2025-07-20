@@ -13,7 +13,7 @@ function PaymentHistory() {
 
   const token = localStorage.getItem("token");
 
-  fetch(`http://localhost:3000/api/payments/${accountNumber}`, {
+  fetch(`${import.meta.env.VITE_API_URL}/payments/${accountNumber}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },

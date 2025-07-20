@@ -5,7 +5,7 @@ function CustomerDetails() {
     const [customers, setCustomers] = useState([])
 
     useEffect(() => {
-      fetch('http://localhost:3000/api/customers', {
+      fetch(`${import.meta.env.VITE_API_URL}/customers`, {
       headers: {
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     }
